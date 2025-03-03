@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-03T13:29:20 IST" name="Default suite" finished-at="2025-03-03T13:30:32 IST" duration-ms="71766">
+    <groups>
+    </groups>
+    <test started-at="2025-03-03T13:29:20 IST" name="Default test" finished-at="2025-03-03T13:30:32 IST" duration-ms="71766">
+      <class name="com.ecommerceApp.tests.OrderProductValidation">
+        <test-method is-config="true" signature="startAppiumService()[pri:0, instance:com.ecommerceApp.tests.OrderProductValidation@75d4a5c2]" started-at="2025-03-03T13:29:20 IST" name="startAppiumService" finished-at="2025-03-03T13:29:31 IST" duration-ms="10618" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAppiumService -->
+        <test-method is-config="true" signature="initializeAndroidDriver()[pri:0, instance:com.ecommerceApp.tests.OrderProductValidation@75d4a5c2]" started-at="2025-03-03T13:29:31 IST" name="initializeAndroidDriver" finished-at="2025-03-03T13:29:42 IST" duration-ms="11526" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeAndroidDriver -->
+        <test-method signature="validateEndToEnd()[pri:0, instance:com.ecommerceApp.tests.OrderProductValidation@75d4a5c2]" started-at="2025-03-03T13:29:42 IST" name="validateEndToEnd" finished-at="2025-03-03T13:30:29 IST" duration-ms="46417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateEndToEnd -->
+        <test-method is-config="true" signature="closeAndroidDriver()[pri:0, instance:com.ecommerceApp.tests.OrderProductValidation@75d4a5c2]" started-at="2025-03-03T13:30:29 IST" name="closeAndroidDriver" finished-at="2025-03-03T13:30:32 IST" duration-ms="2492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAndroidDriver -->
+        <test-method is-config="true" signature="closeAppiumService()[pri:0, instance:com.ecommerceApp.tests.OrderProductValidation@75d4a5c2]" started-at="2025-03-03T13:30:32 IST" name="closeAppiumService" finished-at="2025-03-03T13:30:32 IST" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAppiumService -->
+      </class> <!-- com.ecommerceApp.tests.OrderProductValidation -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
