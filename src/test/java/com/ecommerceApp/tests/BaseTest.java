@@ -27,7 +27,6 @@ public class BaseTest
 		String IP = prop.getProperty("IPAddress");
 		int port = Integer.parseInt(prop.getProperty("PortNumber"));
 
-		System.out.println();
 		service = new AppiumServiceBuilder()
 				.withAppiumJS(new File(System.getProperty("user.home")+"\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
 				.withIPAddress(IP).usingPort(port).withArgument(() -> "--allow-insecure", "chromedriver_autodownload").build();
@@ -38,6 +37,7 @@ public class BaseTest
 	public void initializeAndroidDriver()
 	{
 		String deviceName=prop.getProperty("DeviceName");
+
 		UiAutomator2Options options = new UiAutomator2Options();
 		options.setApp(System.getProperty("user.dir")+"\\src\\main\\resources\\General-Store.apk");
 		options.setDeviceName(deviceName);
