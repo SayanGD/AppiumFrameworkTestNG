@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-03T14:01:18 IST" name="Suite" finished-at="2025-03-03T14:03:31 IST" duration-ms="133204">
+    <groups>
+    </groups>
+    <test started-at="2025-03-03T14:01:18 IST" name="Login Validation" finished-at="2025-03-03T14:02:22 IST" duration-ms="63986">
+      <class name="com.ecommerceApp.tests.LoginValidations">
+        <test-method is-config="true" signature="startAppiumService()[pri:0, instance:com.ecommerceApp.tests.LoginValidations@7817fd62]" started-at="2025-03-03T14:01:18 IST" name="startAppiumService" finished-at="2025-03-03T14:01:29 IST" duration-ms="10875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAppiumService -->
+        <test-method is-config="true" signature="initializeAndroidDriver()[pri:0, instance:com.ecommerceApp.tests.LoginValidations@7817fd62]" started-at="2025-03-03T14:01:29 IST" name="initializeAndroidDriver" finished-at="2025-03-03T14:01:43 IST" duration-ms="14290" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeAndroidDriver -->
+        <test-method signature="validateLogin()[pri:1, instance:com.ecommerceApp.tests.LoginValidations@7817fd62]" started-at="2025-03-03T14:01:43 IST" name="validateLogin" finished-at="2025-03-03T14:01:55 IST" duration-ms="12309" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLogin -->
+        <test-method is-config="true" signature="closeAndroidDriver()[pri:0, instance:com.ecommerceApp.tests.LoginValidations@7817fd62]" started-at="2025-03-03T14:01:56 IST" name="closeAndroidDriver" finished-at="2025-03-03T14:01:57 IST" duration-ms="1168" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAndroidDriver -->
+        <test-method is-config="true" signature="initializeAndroidDriver()[pri:0, instance:com.ecommerceApp.tests.LoginValidations@7817fd62]" started-at="2025-03-03T14:01:57 IST" name="initializeAndroidDriver" finished-at="2025-03-03T14:02:08 IST" duration-ms="11365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeAndroidDriver -->
+        <test-method signature="validateLoginErrorWithMissingName()[pri:2, instance:com.ecommerceApp.tests.LoginValidations@7817fd62]" started-at="2025-03-03T14:02:08 IST" name="validateLoginErrorWithMissingName" finished-at="2025-03-03T14:02:21 IST" duration-ms="13060" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateLoginErrorWithMissingName -->
+        <test-method is-config="true" signature="closeAndroidDriver()[pri:0, instance:com.ecommerceApp.tests.LoginValidations@7817fd62]" started-at="2025-03-03T14:02:21 IST" name="closeAndroidDriver" finished-at="2025-03-03T14:02:22 IST" duration-ms="638" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAndroidDriver -->
+        <test-method is-config="true" signature="closeAppiumService()[pri:0, instance:com.ecommerceApp.tests.LoginValidations@7817fd62]" started-at="2025-03-03T14:02:22 IST" name="closeAppiumService" finished-at="2025-03-03T14:02:22 IST" duration-ms="106" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAppiumService -->
+      </class> <!-- com.ecommerceApp.tests.LoginValidations -->
+    </test> <!-- Login Validation -->
+    <test started-at="2025-03-03T14:02:22 IST" name="End-to-end Validation" finished-at="2025-03-03T14:03:31 IST" duration-ms="68810">
+      <class name="com.ecommerceApp.tests.OrderProductValidation">
+        <test-method is-config="true" signature="startAppiumService()[pri:0, instance:com.ecommerceApp.tests.OrderProductValidation@6aaceffd]" started-at="2025-03-03T14:02:22 IST" name="startAppiumService" finished-at="2025-03-03T14:02:31 IST" duration-ms="8681" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startAppiumService -->
+        <test-method is-config="true" signature="initializeAndroidDriver()[pri:0, instance:com.ecommerceApp.tests.OrderProductValidation@6aaceffd]" started-at="2025-03-03T14:02:31 IST" name="initializeAndroidDriver" finished-at="2025-03-03T14:02:42 IST" duration-ms="11079" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initializeAndroidDriver -->
+        <test-method signature="validateEndToEnd()[pri:0, instance:com.ecommerceApp.tests.OrderProductValidation@6aaceffd]" started-at="2025-03-03T14:02:42 IST" name="validateEndToEnd" finished-at="2025-03-03T14:03:30 IST" duration-ms="47572" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateEndToEnd -->
+        <test-method is-config="true" signature="closeAndroidDriver()[pri:0, instance:com.ecommerceApp.tests.OrderProductValidation@6aaceffd]" started-at="2025-03-03T14:03:30 IST" name="closeAndroidDriver" finished-at="2025-03-03T14:03:31 IST" duration-ms="1285" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAndroidDriver -->
+        <test-method is-config="true" signature="closeAppiumService()[pri:0, instance:com.ecommerceApp.tests.OrderProductValidation@6aaceffd]" started-at="2025-03-03T14:03:31 IST" name="closeAppiumService" finished-at="2025-03-03T14:03:31 IST" duration-ms="81" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeAppiumService -->
+      </class> <!-- com.ecommerceApp.tests.OrderProductValidation -->
+    </test> <!-- End-to-end Validation -->
+  </suite> <!-- Suite -->
+</testng-results>

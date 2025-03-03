@@ -27,12 +27,10 @@ public class BaseTest
 		String IP = prop.getProperty("IPAddress");
 		int port = Integer.parseInt(prop.getProperty("PortNumber"));
 
+		System.out.println();
 		service = new AppiumServiceBuilder()
-				.withAppiumJS(new File("C:\\Users\\Sayan Ghosh Dastidar\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
-				.withIPAddress(IP)
-				.usingPort(port)
-				.withArgument(() -> "--allow-insecure", "chromedriver_autodownload")
-				.build();
+				.withAppiumJS(new File(System.getProperty("user.home")+"\\AppData\\Roaming\\npm\\node_modules\\appium\\build\\lib\\main.js"))
+				.withIPAddress(IP).usingPort(port).withArgument(() -> "--allow-insecure", "chromedriver_autodownload").build();
 		service.start();
 	}
 
