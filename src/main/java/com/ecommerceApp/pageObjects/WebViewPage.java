@@ -24,6 +24,7 @@ public class WebViewPage extends CommonMethods
 
 	public void enterSearchCriteria(String phrase)
 	{
-		fieldSearch.sendKeys(Keys.chord(phrase, Keys.ENTER));
+		fieldSearch.sendKeys(phrase);
+		fieldSearch.sendKeys(Keys.ENTER);
 	}
 }

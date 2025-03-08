@@ -8,11 +8,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JSONTestDataReader
 {
-	public TestDataJSONPOJO readData(String JSONPath) throws StreamReadException, DatabindException, IOException
+	public TestDataPOJO readData(String JSONPath) throws StreamReadException, DatabindException, IOException
 	{
 		ObjectMapper mapper = new ObjectMapper();
 		File file = new File(JSONPath);
-		TestDataJSONPOJO data = mapper.readValue(file, TestDataJSONPOJO.class);
+		TestDataPOJO data = mapper.readValue(file, TestDataPOJO.class);
 		return data;
 	}
 }

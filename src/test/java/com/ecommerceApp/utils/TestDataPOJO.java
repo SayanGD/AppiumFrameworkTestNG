@@ -2,7 +2,7 @@ package com.ecommerceApp.utils;
 
 import java.util.List;
 
-public class TestDataJSONPOJO
+public class TestDataPOJO
 {
 	private String name;
 	private String gender;
