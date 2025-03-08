@@ -1,9 +1,14 @@
 package com.ecommerceApp.tests;
 
+import java.io.IOException;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import com.ecommerceApp.pageObjects.LoginPage;
+import com.ecommerceApp.utils.JSONTestDataReader;
+import com.ecommerceApp.utils.TestDataJSONPOJO;
+import com.fasterxml.jackson.core.exc.StreamReadException;
+import com.fasterxml.jackson.databind.DatabindException;
 import io.appium.java_client.android.AndroidDriver;
 
 public class LoginValidations extends BaseTest
@@ -36,8 +41,10 @@ public class LoginValidations extends BaseTest
 	}
 
 	@DataProvider
-	public Object[][] getLoginData()
+	public Object[][] getLoginData() throws StreamReadException, DatabindException, IOException
 	{
-		return new Object[][] {{"Titas","Female","Belgium"}};
+		JSONTestDataReader dataReader=new JSONTestDataReader();
+		TestDataJSONPOJO testData = dataReader.readData(System.getProperty("user.dir")+"//src//test//resources//TestData.json");
+		return new Object[][] {{testData.getName(), testData.getGender(), testData.getCountry()}};
 	}
 }

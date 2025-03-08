@@ -1,0 +1,10 @@
+{
+  "name": "Ayush",
+  "gender": "Male",
+  "country": "Argentina",
+  "products": [
+    "Laptop",
+    "Smartphone",
+    "Tablet"
+  ]
+}

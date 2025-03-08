@@ -12,7 +12,7 @@ public class OrderProductValidation extends BaseTest
 	public void validateEndToEnd() throws InterruptedException
 	{
 		LoginValidations loginValidation = new LoginValidations();
-		loginValidation.validateLogin(driver,"Sayan","Male","Belgium");
+		loginValidation.validateLogin(driver,"Titas","Female","Belgium");
 
 		ProductsPage productsPage = new ProductsPage(driver);
 		Assert.assertEquals(productsPage.getTitle(), "Products", "Invalid page title");
