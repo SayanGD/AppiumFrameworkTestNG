@@ -30,7 +30,7 @@ public class LoginValidations extends BaseTest
 	}
 
 	@Test (priority = 2, dataProvider = "getLoginData")
-	public void validateLoginErrorWithMissingName(String gender, String country)
+	public void validateLoginErrorWithMissingName(String name, String gender, String country)
 	{
 		LoginPage loginPage = new LoginPage(driver);
 		Assert.assertEquals(loginPage.getTitle(),"General Store");

@@ -17,7 +17,7 @@ import com.ecommerceApp.utils.PropertyReader;
 public class BaseTest
 {
 	AppiumDriverLocalService service;
-	AndroidDriver driver;
+	public AndroidDriver driver;
 	PropertyReader prop;
 
 	@BeforeClass

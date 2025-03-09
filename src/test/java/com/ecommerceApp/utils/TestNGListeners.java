@@ -5,11 +5,16 @@ import org.testng.ITestListener;
 import org.testng.ITestResult;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.ecommerceApp.pageObjects.CommonMethods;
+import com.ecommerceApp.tests.BaseTest;
+import io.appium.java_client.android.AndroidDriver;
+
 
 public class TestNGListeners implements ITestListener
 {
 	ExtentReports extent = ExtentReportBuilder.getExtentReportObject();
 	ExtentTest test;
+	AndroidDriver driver;
 
 	@Override
 	public void onTestStart(ITestResult result)
@@ -32,7 +37,22 @@ public class TestNGListeners implements ITestListener
 	@Override
 	public void onTestFailure(ITestResult result)
 	{
-	    test.fail("Test failed: "+result.getThrowable());
+		test.fail("Test failed: " + result.getThrowable());
+	    try
+	    {
+	        BaseTest testInstance = (BaseTest) result.getInstance();
+	        driver = testInstance.driver;
+	        if (driver!=null)
+	        {
+	            CommonMethods commonMethods = new CommonMethods(driver);
+	            String screenshotPath = commonMethods.takeScreenshot(result.getMethod().getMethodName());
+	            test.addScreenCaptureFromPath(screenshotPath);
+	        }
+	    }
+	    catch (Exception e)
+	    {
+	        System.out.println("Exception while taking screenshot: " + e.getMessage());
+	    }
 	}
 
 	@Override
