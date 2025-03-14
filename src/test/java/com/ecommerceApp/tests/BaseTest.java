@@ -24,7 +24,8 @@ public class BaseTest
 	public void startAppiumService() throws IOException
 	{
 		prop = new PropertyReader();
-		String IP = prop.getProperty("IPAddress");
+		//Provision to accept value from Maven command if needed
+		String IP = System.getProperty("ipAddress")!=null ? System.getProperty("ipAddress"): prop.getProperty("IPAddress");
 		int port = Integer.parseInt(prop.getProperty("PortNumber"));
 
 		service = new AppiumServiceBuilder()

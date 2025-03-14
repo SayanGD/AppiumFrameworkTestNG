@@ -51,7 +51,7 @@ public class TestNGListeners implements ITestListener
 	    }
 	    catch (Exception e)
 	    {
-	        System.out.println("Exception while taking screenshot: " + e.getMessage());
+	    	e.printStackTrace();
 	    }
 	}
 
