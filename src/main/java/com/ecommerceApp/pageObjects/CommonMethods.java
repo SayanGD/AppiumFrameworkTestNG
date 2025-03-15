@@ -28,7 +28,6 @@ public class CommonMethods
 		File source = driver.getScreenshotAs(OutputType.FILE);
 		File destination = new File(System.getProperty("user.dir")+"//reports//"+testCaseName+".png");
 		FileUtils.copyFile(source, destination);
-		System.out.println(destination);
 		return destination.getAbsolutePath();
 	}
 
