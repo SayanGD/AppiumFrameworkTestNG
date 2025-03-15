@@ -40,6 +40,7 @@ public class LoginPage extends CommonMethods
 
 	public String getTitle()
 	{
+		waitForElementToBeVisible(titleToolBar);
 		return titleToolBar.getText();
 	}
 

@@ -8,6 +8,7 @@ import com.google.common.collect.ImmutableMap;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,7 +26,7 @@ public class CommonMethods
 	public CommonMethods(AndroidDriver driver)
 	{
 		this.driver=driver;
-		wait=new WebDriverWait(driver, Duration.ofSeconds(5));
+		wait=new WebDriverWait(driver, Duration.ofSeconds(10));
 	}
 
 	public String takeScreenshot(String testCaseName) throws IOException
@@ -44,6 +45,11 @@ public class CommonMethods
 	public void waitForElementToBeVisible(WebElement element)
 	{
 		wait.until(ExpectedConditions.refreshed(ExpectedConditions.visibilityOf(element)));
+	}
+
+	public void waitForContext(String desiredContext)
+	{
+	   wait.until((WebDriver d) -> ((AndroidDriver) d).getContextHandles().contains(desiredContext));
 	}
 
 	public WebElement scrollToText(String text)

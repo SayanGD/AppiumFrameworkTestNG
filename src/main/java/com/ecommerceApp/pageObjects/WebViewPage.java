@@ -1,5 +1,6 @@
 package com.ecommerceApp.pageObjects;
 
+import java.time.Duration;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -17,9 +18,11 @@ public class WebViewPage extends CommonMethods
 	public WebViewPage(AndroidDriver driver)
 	{
 		super(driver);
-		this.driver=driver;
-		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
-		driver.context("WEBVIEW_com.androidsample.generalstore");
+	    this.driver = driver;
+	    PageFactory.initElements(new AppiumFieldDecorator(driver, Duration.ofSeconds(10)), this);
+	    String desiredContext = "WEBVIEW_com.androidsample.generalstore";
+	    waitForContext(desiredContext);
+	    driver.context(desiredContext);
 	}
 
 	public void enterSearchCriteria(String phrase)
