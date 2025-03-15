@@ -64,4 +64,22 @@ public class CommonMethods
 				"duration", time);
 		((JavascriptExecutor) driver).executeScript("mobile: longClickGesture", params);
 	}
+
+	public void swipe(WebElement element, String direction, int percentage)
+	{
+		Map <String, Object> params = ImmutableMap.of(
+				"elementID", ((RemoteWebElement) element).getId(),
+				"direction", direction,
+				"percent", percentage);
+		((JavascriptExecutor) driver).executeScript("mobile: swipeGesture", params);
+	}
+
+	public void dragAndDrop(WebElement element, int targetX, int targetY)
+	{
+		Map <String, Object> params = ImmutableMap.of(
+				"elementId", ((RemoteWebElement) element).getId(),
+				"endX", targetX,
+				"endY", targetY);
+		((JavascriptExecutor) driver).executeScript("mobile: dragGesture", params);
+	}
 }

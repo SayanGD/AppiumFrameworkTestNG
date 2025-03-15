@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.DatabindException;
 public class OrderProductValidation extends BaseTest
 {
 	@Test (dataProvider = "getData")
-	public void validateEndToEnd(String name, String gender, String country, List<String> products) throws InterruptedException
+	public void validateEndToEnd(String name, String gender, String country, List<String> products)
 	{
 		LoginValidations loginValidation = new LoginValidations();
 		loginValidation.validateLogin(driver, name, gender, country);
@@ -38,7 +38,6 @@ public class OrderProductValidation extends BaseTest
 		Assert.assertEquals(cartPage.getTermsConditionsPopupTitle(), "Terms Of Conditions", "Incorrect popup title");
 		cartPage.clickCartButton();
 
-		//Thread.sleep(3000);
 		WebViewPage webviewPage = new WebViewPage(driver);
 		webviewPage.enterSearchCriteria("Sayan");
 		webviewPage.pressHome();
